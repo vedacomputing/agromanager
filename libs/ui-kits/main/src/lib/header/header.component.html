@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+	<mat-toolbar-row>
+		<a routerLink="/" mat-button>APP Logo</a>
+
+		<span class="example-spacer"></span>
+		<div fxLayout="row" fxLayoutAlign="end center">
+			<ul fxLayout="row" fxLayoutGap="20px">
+				<li>
+					<a routerLink="/settings" mat-icon-button>
+						<mat-icon>settings</mat-icon>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/help" mat-icon-button>
+						<mat-icon>help_outline</mat-icon>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/profile" mat-icon-button [matMenuTriggerFor]="logout">
+						<mat-icon>person_outline</mat-icon>
+					</a>
+					<mat-menu #logout="matMenu">
+						<a mat-menu-item>
+							<mat-icon>exit_to_app</mat-icon>
+							sign out
+						</a>
+					</mat-menu>
+				</li>
+			</ul>
+		</div>
+	</mat-toolbar-row>
+</mat-toolbar>

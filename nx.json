@@ -21,5 +21,34 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "agromanager": {
+      "tags": []
+    },
+    "agromanager-e2e": {
+      "tags": [],
+      "implicitDependencies": ["agromanager"]
+    },
+    "ui-kits-main": {
+      "tags": []
+    },
+    "feature-lazy-home": {
+      "tags": []
+    },
+    "feature-lazy-login": {
+      "tags": []
+    },
+    "feature-lazy-about": {
+      "tags": []
+    },
+    "feature-lazy-help": {
+      "tags": []
+    },
+    "feature-lazy-settings": {
+      "tags": []
+    },
+    "feature-lazy-profile": {
+      "tags": []
+    }
+  }
 }

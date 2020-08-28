@@ -16,15 +16,14 @@
 					</a>
 				</li>
 				<li>
-					<a routerLink="/profile" mat-icon-button [matMenuTriggerFor]="logout">
+					<a routerLink="/profile" mat-icon-button>
 						<mat-icon>person_outline</mat-icon>
 					</a>
-					<mat-menu #logout="matMenu">
-						<a mat-menu-item>
-							<mat-icon>exit_to_app</mat-icon>
-							sign out
-						</a>
-					</mat-menu>
+				</li>
+				<li>
+					<a routerLink="/login" mat-icon-button>
+						<mat-icon>login</mat-icon>
+					</a>
 				</li>
 			</ul>
 		</div>

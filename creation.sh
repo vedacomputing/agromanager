@@ -22,3 +22,9 @@
 
 # nx g @nrwl/angular:component footer --project=ui-kits-main --style=scss --export
 # nx g @nrwl/angular:component navbar --project=ui-kits-main --style=scss --export
+
+# nx g @nrwl/workspace:lib data
+
+# nx g @nrwl/angular:lib --directory=feature/api auth
+# nx g @nrwl/angular:service auth --project=feature-api-auth
+# nx g @nrwl/angular:guard auth --project=feature-api-auth

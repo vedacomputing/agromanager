@@ -1,368 +1,427 @@
 {
-  "version": 1,
-  "projects": {
-    "agromanager": {
-      "projectType": "application",
-      "schematics": {
-        "@nrwl/angular:component": {
-          "style": "scss"
-        }
-      },
-      "root": "apps/agromanager",
-      "sourceRoot": "apps/agromanager/src",
-      "prefix": "agromanager",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/apps/agromanager",
-            "index": "apps/agromanager/src/index.html",
-            "main": "apps/agromanager/src/main.ts",
-            "polyfills": "apps/agromanager/src/polyfills.ts",
-            "tsConfig": "apps/agromanager/tsconfig.app.json",
-            "aot": true,
-            "assets": [
-              "apps/agromanager/src/favicon.ico",
-              "apps/agromanager/src/assets"
-            ],
-            "styles": ["apps/agromanager/src/styles.scss"],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/agromanager/src/environments/environment.ts",
-                  "with": "apps/agromanager/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "agromanager:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "agromanager:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "agromanager:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/agromanager/tsconfig.app.json",
-              "apps/agromanager/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!apps/agromanager/**/*"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "apps/agromanager/jest.config.js",
-            "tsConfig": "apps/agromanager/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "apps/agromanager/src/test-setup.ts"
-          }
-        }
-      }
-    },
-    "agromanager-e2e": {
-      "root": "apps/agromanager-e2e",
-      "sourceRoot": "apps/agromanager-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/agromanager-e2e/cypress.json",
-            "tsConfig": "apps/agromanager-e2e/tsconfig.e2e.json",
-            "devServerTarget": "agromanager:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "agromanager:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/agromanager-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/agromanager-e2e/**/*"]
-          }
-        }
-      }
-    },
-    "ui-kits-main": {
-      "projectType": "library",
-      "root": "libs/ui-kits/main",
-      "sourceRoot": "libs/ui-kits/main/src",
-      "prefix": "agromanager",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/ui-kits/main/tsconfig.lib.json",
-              "libs/ui-kits/main/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/ui-kits/main/**/*"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/ui-kits/main/jest.config.js",
-            "tsConfig": "libs/ui-kits/main/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/ui-kits/main/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "style": "scss"
-        }
-      }
-    },
-    "feature-lazy-home": {
-      "projectType": "library",
-      "root": "libs/feature/lazy/home",
-      "sourceRoot": "libs/feature/lazy/home/src",
-      "prefix": "agromanager",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/feature/lazy/home/tsconfig.lib.json",
-              "libs/feature/lazy/home/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/feature/lazy/home/**/*"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/feature/lazy/home/jest.config.js",
-            "tsConfig": "libs/feature/lazy/home/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/feature/lazy/home/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "style": "scss"
-        }
-      }
-    },
-    "feature-lazy-login": {
-      "projectType": "library",
-      "root": "libs/feature/lazy/login",
-      "sourceRoot": "libs/feature/lazy/login/src",
-      "prefix": "agromanager",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/feature/lazy/login/tsconfig.lib.json",
-              "libs/feature/lazy/login/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/feature/lazy/login/**/*"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/feature/lazy/login/jest.config.js",
-            "tsConfig": "libs/feature/lazy/login/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/feature/lazy/login/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "style": "scss"
-        }
-      }
-    },
-    "feature-lazy-about": {
-      "projectType": "library",
-      "root": "libs/feature/lazy/about",
-      "sourceRoot": "libs/feature/lazy/about/src",
-      "prefix": "agromanager",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/feature/lazy/about/tsconfig.lib.json",
-              "libs/feature/lazy/about/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/feature/lazy/about/**/*"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/feature/lazy/about/jest.config.js",
-            "tsConfig": "libs/feature/lazy/about/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/feature/lazy/about/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "style": "scss"
-        }
-      }
-    },
-    "feature-lazy-help": {
-      "projectType": "library",
-      "root": "libs/feature/lazy/help",
-      "sourceRoot": "libs/feature/lazy/help/src",
-      "prefix": "agromanager",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/feature/lazy/help/tsconfig.lib.json",
-              "libs/feature/lazy/help/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/feature/lazy/help/**/*"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/feature/lazy/help/jest.config.js",
-            "tsConfig": "libs/feature/lazy/help/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/feature/lazy/help/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "style": "scss"
-        }
-      }
-    },
-    "feature-lazy-settings": {
-      "projectType": "library",
-      "root": "libs/feature/lazy/settings",
-      "sourceRoot": "libs/feature/lazy/settings/src",
-      "prefix": "agromanager",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/feature/lazy/settings/tsconfig.lib.json",
-              "libs/feature/lazy/settings/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/feature/lazy/settings/**/*"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/feature/lazy/settings/jest.config.js",
-            "tsConfig": "libs/feature/lazy/settings/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/feature/lazy/settings/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "style": "scss"
-        }
-      }
-    },
-    "feature-lazy-profile": {
-      "projectType": "library",
-      "root": "libs/feature/lazy/profile",
-      "sourceRoot": "libs/feature/lazy/profile/src",
-      "prefix": "agromanager",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/feature/lazy/profile/tsconfig.lib.json",
-              "libs/feature/lazy/profile/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/feature/lazy/profile/**/*"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/feature/lazy/profile/jest.config.js",
-            "tsConfig": "libs/feature/lazy/profile/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/feature/lazy/profile/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "style": "scss"
-        }
-      }
-    }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
-  "schematics": {
-    "@nrwl/angular:application": {
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "unitTestRunner": "jest"
-    }
-  },
-  "defaultProject": "agromanager"
+	"version": 1,
+	"projects": {
+		"agromanager": {
+			"projectType": "application",
+			"schematics": {
+				"@nrwl/angular:component": {
+					"style": "scss"
+				}
+			},
+			"root": "apps/agromanager",
+			"sourceRoot": "apps/agromanager/src",
+			"prefix": "agromanager",
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-angular:browser",
+					"options": {
+						"outputPath": "dist/apps/agromanager",
+						"index": "apps/agromanager/src/index.html",
+						"main": "apps/agromanager/src/main.ts",
+						"polyfills": "apps/agromanager/src/polyfills.ts",
+						"tsConfig": "apps/agromanager/tsconfig.app.json",
+						"aot": true,
+						"assets": [
+							"apps/agromanager/src/favicon.ico",
+							"apps/agromanager/src/assets"
+						],
+						"styles": ["apps/agromanager/src/styles.scss"],
+						"scripts": []
+					},
+					"configurations": {
+						"production": {
+							"fileReplacements": [
+								{
+									"replace": "apps/agromanager/src/environments/environment.ts",
+									"with": "apps/agromanager/src/environments/environment.prod.ts"
+								}
+							],
+							"optimization": true,
+							"outputHashing": "all",
+							"sourceMap": false,
+							"extractCss": true,
+							"namedChunks": false,
+							"extractLicenses": true,
+							"vendorChunk": false,
+							"buildOptimizer": true,
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "2mb",
+									"maximumError": "5mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "6kb",
+									"maximumError": "10kb"
+								}
+							]
+						}
+					}
+				},
+				"serve": {
+					"builder": "@angular-devkit/build-angular:dev-server",
+					"options": {
+						"browserTarget": "agromanager:build"
+					},
+					"configurations": {
+						"production": {
+							"browserTarget": "agromanager:build:production"
+						}
+					}
+				},
+				"extract-i18n": {
+					"builder": "@angular-devkit/build-angular:extract-i18n",
+					"options": {
+						"browserTarget": "agromanager:build"
+					}
+				},
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"apps/agromanager/tsconfig.app.json",
+							"apps/agromanager/tsconfig.spec.json"
+						],
+						"exclude": ["**/node_modules/**", "!apps/agromanager/**/*"]
+					}
+				},
+				"test": {
+					"builder": "@nrwl/jest:jest",
+					"options": {
+						"jestConfig": "apps/agromanager/jest.config.js",
+						"tsConfig": "apps/agromanager/tsconfig.spec.json",
+						"passWithNoTests": true,
+						"setupFile": "apps/agromanager/src/test-setup.ts"
+					}
+				}
+			}
+		},
+		"agromanager-e2e": {
+			"root": "apps/agromanager-e2e",
+			"sourceRoot": "apps/agromanager-e2e/src",
+			"projectType": "application",
+			"architect": {
+				"e2e": {
+					"builder": "@nrwl/cypress:cypress",
+					"options": {
+						"cypressConfig": "apps/agromanager-e2e/cypress.json",
+						"tsConfig": "apps/agromanager-e2e/tsconfig.e2e.json",
+						"devServerTarget": "agromanager:serve"
+					},
+					"configurations": {
+						"production": {
+							"devServerTarget": "agromanager:serve:production"
+						}
+					}
+				},
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": ["apps/agromanager-e2e/tsconfig.e2e.json"],
+						"exclude": ["**/node_modules/**", "!apps/agromanager-e2e/**/*"]
+					}
+				}
+			}
+		},
+		"ui-kits-main": {
+			"projectType": "library",
+			"root": "libs/ui-kits/main",
+			"sourceRoot": "libs/ui-kits/main/src",
+			"prefix": "agromanager",
+			"architect": {
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"libs/ui-kits/main/tsconfig.lib.json",
+							"libs/ui-kits/main/tsconfig.spec.json"
+						],
+						"exclude": ["**/node_modules/**", "!libs/ui-kits/main/**/*"]
+					}
+				},
+				"test": {
+					"builder": "@nrwl/jest:jest",
+					"options": {
+						"jestConfig": "libs/ui-kits/main/jest.config.js",
+						"tsConfig": "libs/ui-kits/main/tsconfig.spec.json",
+						"passWithNoTests": true,
+						"setupFile": "libs/ui-kits/main/src/test-setup.ts"
+					}
+				}
+			},
+			"schematics": {
+				"@nrwl/angular:component": {
+					"style": "scss"
+				}
+			}
+		},
+		"feature-lazy-home": {
+			"projectType": "library",
+			"root": "libs/feature/lazy/home",
+			"sourceRoot": "libs/feature/lazy/home/src",
+			"prefix": "agromanager",
+			"architect": {
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"libs/feature/lazy/home/tsconfig.lib.json",
+							"libs/feature/lazy/home/tsconfig.spec.json"
+						],
+						"exclude": ["**/node_modules/**", "!libs/feature/lazy/home/**/*"]
+					}
+				},
+				"test": {
+					"builder": "@nrwl/jest:jest",
+					"options": {
+						"jestConfig": "libs/feature/lazy/home/jest.config.js",
+						"tsConfig": "libs/feature/lazy/home/tsconfig.spec.json",
+						"passWithNoTests": true,
+						"setupFile": "libs/feature/lazy/home/src/test-setup.ts"
+					}
+				}
+			},
+			"schematics": {
+				"@nrwl/angular:component": {
+					"style": "scss"
+				}
+			}
+		},
+		"feature-lazy-login": {
+			"projectType": "library",
+			"root": "libs/feature/lazy/login",
+			"sourceRoot": "libs/feature/lazy/login/src",
+			"prefix": "agromanager",
+			"architect": {
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"libs/feature/lazy/login/tsconfig.lib.json",
+							"libs/feature/lazy/login/tsconfig.spec.json"
+						],
+						"exclude": ["**/node_modules/**", "!libs/feature/lazy/login/**/*"]
+					}
+				},
+				"test": {
+					"builder": "@nrwl/jest:jest",
+					"options": {
+						"jestConfig": "libs/feature/lazy/login/jest.config.js",
+						"tsConfig": "libs/feature/lazy/login/tsconfig.spec.json",
+						"passWithNoTests": true,
+						"setupFile": "libs/feature/lazy/login/src/test-setup.ts"
+					}
+				}
+			},
+			"schematics": {
+				"@nrwl/angular:component": {
+					"style": "scss"
+				}
+			}
+		},
+		"feature-lazy-about": {
+			"projectType": "library",
+			"root": "libs/feature/lazy/about",
+			"sourceRoot": "libs/feature/lazy/about/src",
+			"prefix": "agromanager",
+			"architect": {
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"libs/feature/lazy/about/tsconfig.lib.json",
+							"libs/feature/lazy/about/tsconfig.spec.json"
+						],
+						"exclude": ["**/node_modules/**", "!libs/feature/lazy/about/**/*"]
+					}
+				},
+				"test": {
+					"builder": "@nrwl/jest:jest",
+					"options": {
+						"jestConfig": "libs/feature/lazy/about/jest.config.js",
+						"tsConfig": "libs/feature/lazy/about/tsconfig.spec.json",
+						"passWithNoTests": true,
+						"setupFile": "libs/feature/lazy/about/src/test-setup.ts"
+					}
+				}
+			},
+			"schematics": {
+				"@nrwl/angular:component": {
+					"style": "scss"
+				}
+			}
+		},
+		"feature-lazy-help": {
+			"projectType": "library",
+			"root": "libs/feature/lazy/help",
+			"sourceRoot": "libs/feature/lazy/help/src",
+			"prefix": "agromanager",
+			"architect": {
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"libs/feature/lazy/help/tsconfig.lib.json",
+							"libs/feature/lazy/help/tsconfig.spec.json"
+						],
+						"exclude": ["**/node_modules/**", "!libs/feature/lazy/help/**/*"]
+					}
+				},
+				"test": {
+					"builder": "@nrwl/jest:jest",
+					"options": {
+						"jestConfig": "libs/feature/lazy/help/jest.config.js",
+						"tsConfig": "libs/feature/lazy/help/tsconfig.spec.json",
+						"passWithNoTests": true,
+						"setupFile": "libs/feature/lazy/help/src/test-setup.ts"
+					}
+				}
+			},
+			"schematics": {
+				"@nrwl/angular:component": {
+					"style": "scss"
+				}
+			}
+		},
+		"feature-lazy-settings": {
+			"projectType": "library",
+			"root": "libs/feature/lazy/settings",
+			"sourceRoot": "libs/feature/lazy/settings/src",
+			"prefix": "agromanager",
+			"architect": {
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"libs/feature/lazy/settings/tsconfig.lib.json",
+							"libs/feature/lazy/settings/tsconfig.spec.json"
+						],
+						"exclude": [
+							"**/node_modules/**",
+							"!libs/feature/lazy/settings/**/*"
+						]
+					}
+				},
+				"test": {
+					"builder": "@nrwl/jest:jest",
+					"options": {
+						"jestConfig": "libs/feature/lazy/settings/jest.config.js",
+						"tsConfig": "libs/feature/lazy/settings/tsconfig.spec.json",
+						"passWithNoTests": true,
+						"setupFile": "libs/feature/lazy/settings/src/test-setup.ts"
+					}
+				}
+			},
+			"schematics": {
+				"@nrwl/angular:component": {
+					"style": "scss"
+				}
+			}
+		},
+		"feature-lazy-profile": {
+			"projectType": "library",
+			"root": "libs/feature/lazy/profile",
+			"sourceRoot": "libs/feature/lazy/profile/src",
+			"prefix": "agromanager",
+			"architect": {
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"libs/feature/lazy/profile/tsconfig.lib.json",
+							"libs/feature/lazy/profile/tsconfig.spec.json"
+						],
+						"exclude": ["**/node_modules/**", "!libs/feature/lazy/profile/**/*"]
+					}
+				},
+				"test": {
+					"builder": "@nrwl/jest:jest",
+					"options": {
+						"jestConfig": "libs/feature/lazy/profile/jest.config.js",
+						"tsConfig": "libs/feature/lazy/profile/tsconfig.spec.json",
+						"passWithNoTests": true,
+						"setupFile": "libs/feature/lazy/profile/src/test-setup.ts"
+					}
+				}
+			},
+			"schematics": {
+				"@nrwl/angular:component": {
+					"style": "scss"
+				}
+			}
+		},
+		"data": {
+			"root": "libs/data",
+			"sourceRoot": "libs/data/src",
+			"projectType": "library",
+			"schematics": {},
+			"architect": {
+				"lint": {
+					"builder": "@nrwl/linter:lint",
+					"options": {
+						"linter": "eslint",
+						"tsConfig": [
+							"libs/data/tsconfig.lib.json",
+							"libs/data/tsconfig.spec.json"
+						],
+						"exclude": ["**/node_modules/**", "!libs/data/**/*"]
+					}
+				},
+				"test": {
+					"builder": "@nrwl/jest:jest",
+					"options": {
+						"jestConfig": "libs/data/jest.config.js",
+						"tsConfig": "libs/data/tsconfig.spec.json",
+						"passWithNoTests": true
+					}
+				}
+			}
+		},
+		"feature-api-auth": {
+			"projectType": "library",
+			"root": "libs/feature/api/auth",
+			"sourceRoot": "libs/feature/api/auth/src",
+			"prefix": "agromanager",
+			"architect": {
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"libs/feature/api/auth/tsconfig.lib.json",
+							"libs/feature/api/auth/tsconfig.spec.json"
+						],
+						"exclude": ["**/node_modules/**", "!libs/feature/api/auth/**/*"]
+					}
+				},
+				"test": {
+					"builder": "@nrwl/jest:jest",
+					"options": {
+						"jestConfig": "libs/feature/api/auth/jest.config.js",
+						"tsConfig": "libs/feature/api/auth/tsconfig.spec.json",
+						"passWithNoTests": true,
+						"setupFile": "libs/feature/api/auth/src/test-setup.ts"
+					}
+				}
+			},
+			"schematics": {
+				"@nrwl/angular:component": {
+					"style": "scss"
+				}
+			}
+		}
+	},
+	"cli": {
+		"defaultCollection": "@nrwl/angular"
+	},
+	"schematics": {
+		"@nrwl/angular:application": {
+			"unitTestRunner": "jest",
+			"e2eTestRunner": "cypress"
+		},
+		"@nrwl/angular:library": {
+			"unitTestRunner": "jest"
+		}
+	},
+	"defaultProject": "agromanager"
 }

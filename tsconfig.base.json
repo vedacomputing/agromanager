@@ -1,37 +1,39 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2017", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@agromanager/ui-kits/main": ["libs/ui-kits/main/src/index.ts"],
-      "@agromanager/feature/lazy/home": ["libs/feature/lazy/home/src/index.ts"],
-      "@agromanager/feature/lazy/login": [
-        "libs/feature/lazy/login/src/index.ts"
-      ],
-      "@agromanager/feature/lazy/about": [
-        "libs/feature/lazy/about/src/index.ts"
-      ],
-      "@agromanager/feature/lazy/help": ["libs/feature/lazy/help/src/index.ts"],
-      "@agromanager/feature/lazy/settings": [
-        "libs/feature/lazy/settings/src/index.ts"
-      ],
-      "@agromanager/feature/lazy/profile": [
-        "libs/feature/lazy/profile/src/index.ts"
-      ]
-    }
-  },
-  "exclude": ["node_modules", "tmp"]
+	"compileOnSave": false,
+	"compilerOptions": {
+		"rootDir": ".",
+		"sourceMap": true,
+		"declaration": false,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"importHelpers": true,
+		"target": "es2015",
+		"module": "esnext",
+		"typeRoots": ["node_modules/@types"],
+		"lib": ["es2017", "dom"],
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"@agromanager/ui-kits/main": ["libs/ui-kits/main/src/index.ts"],
+			"@agromanager/feature/lazy/home": ["libs/feature/lazy/home/src/index.ts"],
+			"@agromanager/feature/lazy/login": [
+				"libs/feature/lazy/login/src/index.ts"
+			],
+			"@agromanager/feature/lazy/about": [
+				"libs/feature/lazy/about/src/index.ts"
+			],
+			"@agromanager/feature/lazy/help": ["libs/feature/lazy/help/src/index.ts"],
+			"@agromanager/feature/lazy/settings": [
+				"libs/feature/lazy/settings/src/index.ts"
+			],
+			"@agromanager/feature/lazy/profile": [
+				"libs/feature/lazy/profile/src/index.ts"
+			],
+			"@agromanager/data": ["libs/data/src/index.ts"],
+			"@agromanager/feature/api/auth": ["libs/feature/api/auth/src/index.ts"]
+		}
+	},
+	"exclude": ["node_modules", "tmp"]
 }

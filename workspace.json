@@ -94,6 +94,19 @@
 						"passWithNoTests": true,
 						"setupFile": "apps/agromanager/src/test-setup.ts"
 					}
+				},
+				"compodoc": {
+					"builder": "@twittwer/compodoc:compodoc",
+					"options": {
+						"tsConfig": "apps\\agromanager\\tsconfig.compodoc.json",
+						"outputPath": "dist\\compodoc\\agromanager",
+						"workspaceDocs": true
+					},
+					"configurations": {
+						"json": {
+							"exportFormat": "json"
+						}
+					}
 				}
 			}
 		},

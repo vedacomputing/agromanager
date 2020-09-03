@@ -4,9 +4,13 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {RouterModule} from '@angular/router';
 
+import {firebaseConfig} from '../environments/firebase';
+import {AngularFireModule} from '@angular/fire';
+
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {UiKitsMainModule} from '@agromanager/ui-kits/main';
+import {from} from 'rxjs';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -14,6 +18,7 @@ import {UiKitsMainModule} from '@agromanager/ui-kits/main';
 		BrowserModule,
 		UiKitsMainModule,
 		FlexLayoutModule,
+		AngularFireModule.initializeApp(firebaseConfig),
 		RouterModule.forRoot(
 			[
 				{

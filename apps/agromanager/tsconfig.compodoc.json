@@ -1,7 +1,8 @@
 {
-  "extends": "./tsconfig.app.json",
-  "include": [
-    "../../apps/**/*.ts",
-    "../../libs/**/*.ts"
-  ]
+	"extends": "./tsconfig.app.json",
+	"include": [
+		"../../apps/**/*.ts",
+		"../../libs/**/*.ts"
+	] /* ,
+	"exclude": ["/apps/agromanager/src/environments/**"] */
 }

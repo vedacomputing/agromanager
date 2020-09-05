@@ -82,12 +82,13 @@ import {FeatureModulesDashboardModule} from &#x27;@agromanager/feature/modules/d
  */
 export const APP_ROUTES: Routes &#x3D; [
 	{
-		path: &#x27;dashboard&#x27;,
-		component: FeatureModulesDashboardModule,
+		path: &#x27;&#x27;,
+		redirectTo: &#x27;/home&#x27;,
+		pathMatch: &#x27;full&#x27;,
 		// canActivate: [AuthGuard]
 	},
 	{
-		path: &#x27;&#x27;,
+		path: &#x27;home&#x27;,
 		loadChildren: () &#x3D;&gt;
 			&quot;import(&#x27;@agromanager/feature/lazy/home&#x27;).then(\
 				(module) &#x3D;&gt; module.FeatureLazyHomeModule\
@@ -171,7 +172,7 @@ export class AppRoutingModule {}
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'equipment.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

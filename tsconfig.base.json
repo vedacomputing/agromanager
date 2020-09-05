@@ -41,5 +41,9 @@
 			]
 		}
 	},
-	"exclude": ["node_modules", "tmp"]
+	"exclude": [
+		"node_modules",
+		"tmp",
+		"apps/agromanager/src/environments/**/*.ts"
+	]
 }

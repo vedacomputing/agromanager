@@ -1,68 +1,66 @@
 {
-  "npmScope": "agromanager",
-  "affected": {
-    "defaultBase": "master"
-  },
-  "implicitDependencies": {
-    "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
-    "tsconfig.base.json": "*",
-    "tslint.json": "*",
-    "nx.json": "*"
-  },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e",
-          "compodoc"
-        ]
-      }
-    }
-  },
-  "projects": {
-    "agromanager": {
-      "tags": []
-    },
-    "agromanager-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "agromanager"
-      ]
-    },
-    "ui-kits-main": {
-      "tags": []
-    },
-    "feature-lazy-home": {
-      "tags": []
-    },
-    "feature-lazy-login": {
-      "tags": []
-    },
-    "feature-lazy-about": {
-      "tags": []
-    },
-    "feature-lazy-help": {
-      "tags": []
-    },
-    "feature-lazy-settings": {
-      "tags": []
-    },
-    "feature-lazy-profile": {
-      "tags": []
-    },
-    "data": {
-      "tags": []
-    },
-    "feature-api-auth": {
-      "tags": []
-    }
-  }
+	"npmScope": "agromanager",
+	"affected": {
+		"defaultBase": "master"
+	},
+	"implicitDependencies": {
+		"workspace.json": "*",
+		"package.json": {
+			"dependencies": "*",
+			"devDependencies": "*"
+		},
+		"tsconfig.base.json": "*",
+		"tslint.json": "*",
+		"nx.json": "*"
+	},
+	"tasksRunnerOptions": {
+		"default": {
+			"runner": "@nrwl/workspace/tasks-runners/default",
+			"options": {
+				"cacheableOperations": ["build", "lint", "test", "e2e", "compodoc"]
+			}
+		}
+	},
+	"projects": {
+		"agromanager": {
+			"tags": []
+		},
+		"agromanager-e2e": {
+			"tags": [],
+			"implicitDependencies": ["agromanager"]
+		},
+		"ui-kits-main": {
+			"tags": []
+		},
+		"feature-lazy-home": {
+			"tags": []
+		},
+		"feature-lazy-login": {
+			"tags": []
+		},
+		"feature-lazy-about": {
+			"tags": []
+		},
+		"feature-lazy-help": {
+			"tags": []
+		},
+		"feature-lazy-settings": {
+			"tags": []
+		},
+		"feature-lazy-profile": {
+			"tags": []
+		},
+		"data": {
+			"tags": []
+		},
+		"feature-api-auth": {
+			"tags": []
+		},
+		"feature-modules-dashboard": {
+			"tags": []
+		},
+		"feature-modules-animals": {
+			"tags": []
+		}
+	}
 }

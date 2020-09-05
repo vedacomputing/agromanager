@@ -422,6 +422,76 @@
 					"style": "scss"
 				}
 			}
+		},
+		"feature-modules-dashboard": {
+			"projectType": "library",
+			"root": "libs/feature/modules/dashboard",
+			"sourceRoot": "libs/feature/modules/dashboard/src",
+			"prefix": "agromanager",
+			"architect": {
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"libs/feature/modules/dashboard/tsconfig.lib.json",
+							"libs/feature/modules/dashboard/tsconfig.spec.json"
+						],
+						"exclude": [
+							"**/node_modules/**",
+							"!libs/feature/modules/dashboard/**/*"
+						]
+					}
+				},
+				"test": {
+					"builder": "@nrwl/jest:jest",
+					"options": {
+						"jestConfig": "libs/feature/modules/dashboard/jest.config.js",
+						"tsConfig": "libs/feature/modules/dashboard/tsconfig.spec.json",
+						"passWithNoTests": true,
+						"setupFile": "libs/feature/modules/dashboard/src/test-setup.ts"
+					}
+				}
+			},
+			"schematics": {
+				"@nrwl/angular:component": {
+					"style": "scss"
+				}
+			}
+		},
+		"feature-modules-animals": {
+			"projectType": "library",
+			"root": "libs/feature/modules/animals",
+			"sourceRoot": "libs/feature/modules/animals/src",
+			"prefix": "agromanager",
+			"architect": {
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"libs/feature/modules/animals/tsconfig.lib.json",
+							"libs/feature/modules/animals/tsconfig.spec.json"
+						],
+						"exclude": [
+							"**/node_modules/**",
+							"!libs/feature/modules/animals/**/*"
+						]
+					}
+				},
+				"test": {
+					"builder": "@nrwl/jest:jest",
+					"options": {
+						"jestConfig": "libs/feature/modules/animals/jest.config.js",
+						"tsConfig": "libs/feature/modules/animals/tsconfig.spec.json",
+						"passWithNoTests": true,
+						"setupFile": "libs/feature/modules/animals/src/test-setup.ts"
+					}
+				}
+			},
+			"schematics": {
+				"@nrwl/angular:component": {
+					"style": "scss"
+				}
+			}
 		}
 	},
 	"cli": {

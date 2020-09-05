@@ -32,7 +32,13 @@
 				"libs/feature/lazy/profile/src/index.ts"
 			],
 			"@agromanager/data": ["libs/data/src/index.ts"],
-			"@agromanager/feature/api/auth": ["libs/feature/api/auth/src/index.ts"]
+			"@agromanager/feature/api/auth": ["libs/feature/api/auth/src/index.ts"],
+			"@agromanager/feature/modules/dashboard": [
+				"libs/feature/modules/dashboard/src/index.ts"
+			],
+			"@agromanager/feature/modules/animals": [
+				"libs/feature/modules/animals/src/index.ts"
+			]
 		}
 	},
 	"exclude": ["node_modules", "tmp"]

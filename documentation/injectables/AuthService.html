@@ -59,6 +59,13 @@
             <code>libs/feature/api/auth/src/lib/auth.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Auth Service for firebase</p>
+
+            </p>
 
 
 
@@ -101,7 +108,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">libs/feature/api/auth/src/lib/auth.service.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">libs/feature/api/auth/src/lib/auth.service.ts:22</a></div>
                             </td>
                         </tr>
 
@@ -189,7 +196,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">libs/feature/api/auth/src/lib/auth.service.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">libs/feature/api/auth/src/lib/auth.service.ts:22</a></div>
                             </td>
                         </tr>
 
@@ -216,6 +223,9 @@ import {
 import {Observable, of} from &#x27;rxjs&#x27;;
 import {switchMap} from &#x27;rxjs/operators&#x27;;
 
+/**
+ * Auth Service for firebase
+ */
 @Injectable({
 	providedIn: &#x27;root&#x27;,
 })
@@ -226,7 +236,20 @@ export class AuthService {
 		private afAuth: AngularFireAuth,
 		private afstore: AngularFirestore,
 		private router: Router
-	) {}
+	) {
+		// Get the auth state, then fetch the Firestore user document or return null
+		this.user$ &#x3D; this.afAuth.authState.pipe(
+			switchMap((user) &#x3D;&gt; {
+				// Logged in
+				if (user) {
+					return this.afstore.doc&lt;User&gt;(&#x60;users/${user.uid}&#x60;).valueChanges();
+				} else {
+					// Logged out
+					return of(null);
+				}
+			})
+		);
+	}
 }
 </code></pre>
     </div>

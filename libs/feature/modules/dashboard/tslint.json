@@ -1,0 +1,10 @@
+{
+	"extends": "../../../../tslint.json",
+	"rules": {
+		"directive-selector": [true, "attribute", "agromanager", "camelCase"],
+		"component-selector": [true, "element", "agromanager", "kebab-case"]
+	},
+	"linterOptions": {
+		"exclude": ["!**/*"]
+	}
+}

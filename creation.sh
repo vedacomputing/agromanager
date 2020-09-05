@@ -28,3 +28,9 @@
 # nx g @nrwl/angular:lib --directory=feature/api auth
 # nx g @nrwl/angular:service auth --project=feature-api-auth
 # nx g @nrwl/angular:guard auth --project=feature-api-auth
+
+# nx g @nrwl/angular:lib --directory=feature/modules dashboard --routing
+# nx g @nrwl/angular:component dashboard-page --project=feature-modules-dashboard --style=scss
+
+# nx g @nrwl/angular:lib --directory=feature/modules animals --routing --parentModule=apps/agromanager/src/app/app.module.ts --style=scss
+# nx g @nrwl/angular:component animals-page --project=feature-modules-animals --style=scss

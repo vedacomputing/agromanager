@@ -12,6 +12,9 @@ import {
 import {Observable, of} from 'rxjs';
 import {switchMap} from 'rxjs/operators';
 
+/**
+ * Auth Service for firebase
+ */
 @Injectable({
 	providedIn: 'root',
 })

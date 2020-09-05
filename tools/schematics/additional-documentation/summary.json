@@ -1,0 +1,28 @@
+[
+	{
+		"title": "Introduction",
+		"file": "Introduction.md"
+	},
+	{
+		"title": "App-design",
+		"file": "app-design.md"
+	},
+	{
+		"title": "Lib-design",
+		"file": "lib-design.md"
+	},
+	{
+		"title": "DB-design",
+		"file": "db-design.md",
+		"children": [
+			{"title": "company", "file": "db/company.md"},
+			{"title": "user", "file": "db/user.md"},
+			{"title": "field", "file": "db/field.md"},
+			{"title": "livestock", "file": "db/livestock.md"},
+			{"title": "personnel", "file": "db/personnel.md"},
+			{"title": "inventory", "file": "db/inventory.md"},
+			{"title": "building", "file": "db/building.md"},
+			{"title": "equipment", "file": "db/equipment.md"}
+		]
+	}
+]

@@ -142,20 +142,20 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { CommonModule } from &#x27;@angular/common&#x27;;
-import { RouterModule } from &#x27;@angular/router&#x27;;
-import { LoginPageComponent } from &#x27;./login-page/login-page.component&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {NgModule} from &#x27;@angular/core&#x27;;
+import {CommonModule} from &#x27;@angular/common&#x27;;
+import {RouterModule} from &#x27;@angular/router&#x27;;
+import {LoginPageComponent} from &#x27;./login-page/login-page.component&#x27;;
 
 @NgModule({
-  imports: [
-    CommonModule,
+	imports: [
+		CommonModule,
 
-    RouterModule.forChild([
-      {path: &#x27;&#x27;, pathMatch: &#x27;full&#x27;, component: LoginPageComponent}
-    ]),
-  ],
-  declarations: [LoginPageComponent],
+		RouterModule.forChild([
+			{path: &#x27;&#x27;, pathMatch: &#x27;full&#x27;, component: LoginPageComponent},
+		]),
+	],
+	declarations: [LoginPageComponent],
 })
 export class FeatureLazyLoginModule {}
 </code></pre>

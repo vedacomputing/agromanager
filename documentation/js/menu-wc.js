@@ -187,13 +187,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/FeatureLazyLoginModule.html" data-type="entity-link">FeatureLazyLoginModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-FeatureLazyLoginModule-8ad0722fc9651ad66f880c16d7d1c4bf"' : 'data-target="#xs-components-links-module-FeatureLazyLoginModule-8ad0722fc9651ad66f880c16d7d1c4bf"' }>
+                                            'data-target="#components-links-module-FeatureLazyLoginModule-06fe498f82aac9f9bd12ec760170c208"' : 'data-target="#xs-components-links-module-FeatureLazyLoginModule-06fe498f82aac9f9bd12ec760170c208"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FeatureLazyLoginModule-8ad0722fc9651ad66f880c16d7d1c4bf"' :
-                                            'id="xs-components-links-module-FeatureLazyLoginModule-8ad0722fc9651ad66f880c16d7d1c4bf"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FeatureLazyLoginModule-06fe498f82aac9f9bd12ec760170c208"' :
+                                            'id="xs-components-links-module-FeatureLazyLoginModule-06fe498f82aac9f9bd12ec760170c208"' }>
                                             <li class="link">
                                                 <a href="components/LoginPageComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">LoginPageComponent</a>

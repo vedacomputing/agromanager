@@ -1,16 +1,16 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { LoginPageComponent } from './login-page/login-page.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {RouterModule} from '@angular/router';
+import {LoginPageComponent} from './login-page/login-page.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
+	imports: [
+		CommonModule,
 
-    RouterModule.forChild([
-      {path: '', pathMatch: 'full', component: LoginPageComponent}
-    ]),
-  ],
-  declarations: [LoginPageComponent],
+		RouterModule.forChild([
+			{path: '', pathMatch: 'full', component: LoginPageComponent},
+		]),
+	],
+	declarations: [LoginPageComponent],
 })
 export class FeatureLazyLoginModule {}

@@ -11,6 +11,7 @@ import {
 
 import {Observable, of} from 'rxjs';
 import {switchMap} from 'rxjs/operators';
+import {async} from 'rxjs/internal/scheduler/async';
 
 /**
  * Auth Service for firebase
@@ -19,6 +20,9 @@ import {switchMap} from 'rxjs/operators';
 	providedIn: 'root',
 })
 export class AuthService {
+	/**
+	 * @interface{User} from User in data lib
+	 */
 	user$: Observable<User>;
 
 	constructor(
@@ -26,7 +30,9 @@ export class AuthService {
 		private afstore: AngularFirestore,
 		private router: Router
 	) {
-		// Get the auth state, then fetch the Firestore user document or return null
+		/**
+		 *  Get the auth state, then fetch the Firestore user document or return null
+		 *  */
 		this.user$ = this.afAuth.authState.pipe(
 			switchMap((user) => {
 				// Logged in
@@ -38,5 +44,45 @@ export class AuthService {
 				}
 			})
 		);
+	}
+
+	/**
+	 * Create the SignIn Async Function that returns a promise
+	 */
+	async EmailSignIn(email: string, password: string) {
+		try {
+			const credential = await this.afAuth.signInWithEmailAndPassword(
+				email,
+				password
+			);
+			this.updateUserData(credential.user);
+			this.router.navigate(['dashboard']);
+		} catch (error) {
+			// log error here
+		}
+	}
+
+	async signOut() {
+		try {
+			await this.afAuth.signOut();
+			this.router.navigate(['/']);
+		} catch (error) {
+			// log error here
+		}
+	}
+
+	private updateUserData(user) {
+		const userRef: AngularFirestoreDocument<User> = this.afstore.doc(
+			`users/${user.uid}`
+		);
+
+		const data = {
+			uid: user.uid,
+			email: user.email,
+			displayName: user.displayName,
+			photoURL: user.photoURL,
+		};
+
+		return userRef.set(data, {merge: true});
 	}
 }

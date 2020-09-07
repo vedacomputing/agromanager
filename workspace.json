@@ -22,10 +22,18 @@
 						"tsConfig": "apps/agromanager/tsconfig.app.json",
 						"aot": true,
 						"assets": [
+							{
+								"glob": "**/*",
+								"input": "node_modules/ngx-auth-firebaseui/assets/",
+								"output": "./assets/"
+							},
 							"apps/agromanager/src/favicon.ico",
 							"apps/agromanager/src/assets"
 						],
-						"styles": ["apps/agromanager/src/styles.scss"],
+						"styles": [
+							"apps/agromanager/src/styles.scss",
+							"node_modules/material-design-icons/iconfont/material-icons.css"
+						],
 						"scripts": []
 					},
 					"configurations": {

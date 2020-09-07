@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {AuthService} from '@agromanager/feature/api/auth';
 
 @Component({
 	selector: 'agromanager-login-page',
@@ -6,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
 	styleUrls: ['./login-page.component.scss'],
 })
 export class LoginPageComponent implements OnInit {
-	constructor() {}
+	constructor(private authService: AuthService) {}
 
 	ngOnInit(): void {}
 }

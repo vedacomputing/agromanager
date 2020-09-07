@@ -11,10 +11,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {UiKitsMainModule} from '@agromanager/ui-kits/main';
 import {from} from 'rxjs';
-import {
-	FeatureModulesAnimalsModule,
-	featureModulesAnimalsRoutes,
-} from '@agromanager/feature/modules/animals';
+import {FeatureModulesAnimalsModule} from '@agromanager/feature/modules/animals';
 
 @NgModule({
 	declarations: [AppComponent],

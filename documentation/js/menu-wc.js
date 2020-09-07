@@ -109,13 +109,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-40b53f4474b0e04476b91346770dcee0"' : 'data-target="#xs-components-links-module-AppModule-40b53f4474b0e04476b91346770dcee0"' }>
+                                            'data-target="#components-links-module-AppModule-56f39fe66fb80481b1a9894f81909fbe"' : 'data-target="#xs-components-links-module-AppModule-56f39fe66fb80481b1a9894f81909fbe"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-40b53f4474b0e04476b91346770dcee0"' :
-                                            'id="xs-components-links-module-AppModule-40b53f4474b0e04476b91346770dcee0"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-56f39fe66fb80481b1a9894f81909fbe"' :
+                                            'id="xs-components-links-module-AppModule-56f39fe66fb80481b1a9894f81909fbe"' }>
                                             <li class="link">
                                                 <a href="components/AppComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
@@ -241,13 +241,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/FeatureModulesAnimalsModule.html" data-type="entity-link">FeatureModulesAnimalsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-FeatureModulesAnimalsModule-3d656b8b94a1a9b963212a09665256fa"' : 'data-target="#xs-components-links-module-FeatureModulesAnimalsModule-3d656b8b94a1a9b963212a09665256fa"' }>
+                                            'data-target="#components-links-module-FeatureModulesAnimalsModule-4f5e82f7f3fbb586d070556396bf4d18"' : 'data-target="#xs-components-links-module-FeatureModulesAnimalsModule-4f5e82f7f3fbb586d070556396bf4d18"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FeatureModulesAnimalsModule-3d656b8b94a1a9b963212a09665256fa"' :
-                                            'id="xs-components-links-module-FeatureModulesAnimalsModule-3d656b8b94a1a9b963212a09665256fa"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FeatureModulesAnimalsModule-4f5e82f7f3fbb586d070556396bf4d18"' :
+                                            'id="xs-components-links-module-FeatureModulesAnimalsModule-4f5e82f7f3fbb586d070556396bf4d18"' }>
                                             <li class="link">
                                                 <a href="components/AnimalsPageComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AnimalsPageComponent</a>

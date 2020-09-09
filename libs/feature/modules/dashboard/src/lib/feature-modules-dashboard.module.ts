@@ -7,5 +7,6 @@ import {DashboardPageComponent} from './dashboard-page/dashboard-page.component'
 @NgModule({
 	imports: [CommonModule],
 	declarations: [DashboardPageComponent],
+	exports: [DashboardPageComponent],
 })
 export class FeatureModulesDashboardModule {}

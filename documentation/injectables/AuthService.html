@@ -102,6 +102,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
+                                <a href="#RegisterUser">RegisterUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#signOut">signOut</a>
                             </li>
                             <li>
@@ -137,6 +141,8 @@
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Constructor for the AuthService</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -145,6 +151,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -159,6 +166,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>firebase authorization</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>afstore</td>
@@ -171,6 +182,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>firestore to pull document</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>router</td>
@@ -183,6 +198,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>router to navigate the user</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -222,8 +241,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="52"
-                            class="link-to-prism">libs/feature/api/auth/src/lib/auth.service.ts:52</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">libs/feature/api/auth/src/lib/auth.service.ts:78</a></div>
                 </td>
             </tr>
 
@@ -241,6 +260,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -255,6 +275,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>email address of the user to SignIn from form</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>password</td>
@@ -267,6 +291,105 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>password of user to SignIn from form</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="RegisterUser"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            RegisterUser
+                        </b>
+                        <a href="#RegisterUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>RegisterUser(email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">libs/feature/api/auth/src/lib/auth.service.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Register new User</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>email</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>email address of the user to SignIn from form</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>password</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>password of user to SignIn from form</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -308,14 +431,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="65"
-                            class="link-to-prism">libs/feature/api/auth/src/lib/auth.service.ts:65</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">libs/feature/api/auth/src/lib/auth.service.ts:94</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>SignOut the User already logged in</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
@@ -349,14 +474,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="74"
-                            class="link-to-prism">libs/feature/api/auth/src/lib/auth.service.ts:74</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="107"
+                            class="link-to-prism">libs/feature/api/auth/src/lib/auth.service.ts:107</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Updates the User Document on the Firestore</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -365,6 +492,7 @@
                                 <tr>
                                     <td>Name</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -376,6 +504,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>from SignIn information to get uid for user document</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -423,6 +555,12 @@
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>user Observable taken from interface of</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -445,7 +583,6 @@ import {
 
 import {Observable, of} from &#x27;rxjs&#x27;;
 import {switchMap} from &#x27;rxjs/operators&#x27;;
-import {async} from &#x27;rxjs/internal/scheduler/async&#x27;;
 
 /**
  * Auth Service for firebase
@@ -455,18 +592,25 @@ import {async} from &#x27;rxjs/internal/scheduler/async&#x27;;
 })
 export class AuthService {
 	/**
-	 * @interface{User} from User in data lib
+	 * user Observable taken from interface of
+	 * @interface user$ from User in data lib
 	 */
 	user$: Observable&lt;User&gt;;
 
+	/**
+	 * Constructor for the AuthService
+	 * @param afAuth firebase authorization
+	 * @param afstore firestore to pull document
+	 * @param router router to navigate the user
+	 */
 	constructor(
 		private afAuth: AngularFireAuth,
 		private afstore: AngularFirestore,
 		private router: Router
 	) {
 		/**
-		 *  Get the auth state, then fetch the Firestore user document or return null
-		 *  */
+		 * Get the auth state, then fetch the Firestore user document or return null
+		 */
 		this.user$ &#x3D; this.afAuth.authState.pipe(
 			switchMap((user) &#x3D;&gt; {
 				// Logged in
@@ -481,11 +625,13 @@ export class AuthService {
 	}
 
 	/**
-	 * Create the SignIn Async Function that returns a promise
+	 * Register new User
+	 * @param email email address of the user to SignIn from form
+	 * @param password password of user to SignIn from form
 	 */
-	async EmailSignIn(email: string, password: string) {
+	async RegisterUser(email: string, password: string) {
 		try {
-			const credential &#x3D; await this.afAuth.signInWithEmailAndPassword(
+			const credential &#x3D; await this.afAuth.createUserWithEmailAndPassword(
 				email,
 				password
 			);
@@ -496,6 +642,27 @@ export class AuthService {
 		}
 	}
 
+	/**
+	 * Create the SignIn Async Function that returns a promise
+	 * @param email email address of the user to SignIn from form
+	 * @param password password of user to SignIn from form
+	 */
+	async EmailSignIn(email: string, password: string) {
+		try {
+			const credential &#x3D; await this.afAuth.signInWithEmailAndPassword(
+				email,
+				password
+			);
+			this.updateUserData(credential.user);
+			this.router.navigate([&#x27;/dashboard&#x27;]);
+		} catch (error) {
+			// log error here
+		}
+	}
+
+	/**
+	 * SignOut the User already logged in
+	 */
 	async signOut() {
 		try {
 			await this.afAuth.signOut();
@@ -505,6 +672,10 @@ export class AuthService {
 		}
 	}
 
+	/**
+	 *  Updates the User Document on the Firestore
+	 * @param user from SignIn information to get uid for user document
+	 */
 	private updateUserData(user) {
 		const userRef: AngularFirestoreDocument&lt;User&gt; &#x3D; this.afstore.doc(
 			&#x60;users/${user.uid}&#x60;
@@ -513,8 +684,6 @@ export class AuthService {
 		const data &#x3D; {
 			uid: user.uid,
 			email: user.email,
-			displayName: user.displayName,
-			photoURL: user.photoURL,
 		};
 
 		return userRef.set(data, {merge: true});

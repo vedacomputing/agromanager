@@ -21,9 +21,19 @@
 					</a>
 				</li>
 				<li>
-					<a routerLink="/login" mat-icon-button>
-						<mat-icon>login</mat-icon>
-					</a>
+					<div *ngIf="auth.user$ | async; then logout; else login"></div>
+
+					<ng-template #login>
+						<a routerLink="/login" mat-icon-button>
+							<mat-icon>login</mat-icon>
+						</a>
+					</ng-template>
+
+					<ng-template #logout>
+						<a (click)="auth.signOut()" routerLink="/" mat-icon-button>
+							<mat-icon>logout</mat-icon>
+						</a>
+					</ng-template>
 				</li>
 			</ul>
 		</div>

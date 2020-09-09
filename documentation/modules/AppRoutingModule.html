@@ -73,7 +73,7 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {NgModule} from &#x27;@angular/core&#x27;;
 import {Routes, RouterModule} from &#x27;@angular/router&#x27;; // CLI imports router
 
-// import {AuthGuard} from &#x27;@agromanager/feature/api/auth/&#x27;;
+import {AuthGuard} from &#x27;@agromanager/feature/api/auth&#x27;;
 
 import {FeatureModulesDashboardModule} from &#x27;@agromanager/feature/modules/dashboard&#x27;;
 
@@ -82,13 +82,13 @@ import {FeatureModulesDashboardModule} from &#x27;@agromanager/feature/modules/d
  */
 export const APP_ROUTES: Routes &#x3D; [
 	{
-		path: &#x27;&#x27;,
-		redirectTo: &#x27;/home&#x27;,
+		path: &#x27;dashboard&#x27;,
 		pathMatch: &#x27;full&#x27;,
-		// canActivate: [AuthGuard]
+		canActivate: [AuthGuard],
+		component: FeatureModulesDashboardModule,
 	},
 	{
-		path: &#x27;home&#x27;,
+		path: &#x27;&#x27;,
 		loadChildren: () &#x3D;&gt;
 			&quot;import(&#x27;@agromanager/feature/lazy/home&#x27;).then(\
 				(module) &#x3D;&gt; module.FeatureLazyHomeModule\

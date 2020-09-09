@@ -7,7 +7,7 @@ import {AuthService} from '@agromanager/feature/api/auth';
 	styleUrls: ['./login-page.component.scss'],
 })
 export class LoginPageComponent implements OnInit {
-	constructor(private authService: AuthService) {}
+	constructor(public auth: AuthService) {}
 
 	ngOnInit(): void {}
 }

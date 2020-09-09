@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router'; // CLI imports router
 
-// import {AuthGuard} from '@agromanager/feature/api/auth/';
+import {AuthGuard} from '@agromanager/feature/api/auth';
 
 import {FeatureModulesDashboardModule} from '@agromanager/feature/modules/dashboard';
 
@@ -10,13 +10,13 @@ import {FeatureModulesDashboardModule} from '@agromanager/feature/modules/dashbo
  */
 export const APP_ROUTES: Routes = [
 	{
-		path: '',
-		redirectTo: '/home',
+		path: 'dashboard',
 		pathMatch: 'full',
-		// canActivate: [AuthGuard]
+		canActivate: [AuthGuard],
+		component: FeatureModulesDashboardModule,
 	},
 	{
-		path: 'home',
+		path: '',
 		loadChildren: () =>
 			import('@agromanager/feature/lazy/home').then(
 				(module) => module.FeatureLazyHomeModule

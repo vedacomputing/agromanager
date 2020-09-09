@@ -41,60 +41,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 </li>
                     </ul>
                 </li>
-                    <li class="chapter additional">
-                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#additional-pages"'
-                            : 'data-target="#xs-additional-pages"' }>
-                            <span class="icon ion-ios-book"></span>
-                            <span>Additional documentation</span>
-                            <span class="icon ion-ios-arrow-down"></span>
-                        </div>
-                        <ul class="links collapse " ${ isNormalMode ? 'id="additional-pages"' : 'id="xs-additional-pages"' }>
-                                    <li class="link ">
-                                        <a href="additional-documentation/introduction.html" data-type="entity-link" data-context-id="additional">Introduction</a>
-                                    </li>
-                                    <li class="link ">
-                                        <a href="additional-documentation/app-design.html" data-type="entity-link" data-context-id="additional">App-design</a>
-                                    </li>
-                                    <li class="link ">
-                                        <a href="additional-documentation/lib-design.html" data-type="entity-link" data-context-id="additional">Lib-design</a>
-                                    </li>
-                                    <li class="chapter inner">
-                                        <a data-type="chapter-link" href="additional-documentation/db-design.html" data-context-id="additional">
-                                            <div class="menu-toggler linked" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#additional-page-94b6dcacadf2417716f009c7cae4a40e"' : 'data-target="#xs-additional-page-94b6dcacadf2417716f009c7cae4a40e"' }>
-                                                <span class="link-name">DB-design</span>
-                                                <span class="icon ion-ios-arrow-down"></span>
-                                            </div>
-                                        </a>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="additional-page-94b6dcacadf2417716f009c7cae4a40e"' : 'id="xs-additional-page-94b6dcacadf2417716f009c7cae4a40e"' }>
-                                            <li class="link for-chapter2">
-                                                <a href="additional-documentation/db-design/company.html" data-type="entity-link" data-context="sub-entity" data-context-id="additional">company</a>
-                                            </li>
-                                            <li class="link for-chapter2">
-                                                <a href="additional-documentation/db-design/user.html" data-type="entity-link" data-context="sub-entity" data-context-id="additional">user</a>
-                                            </li>
-                                            <li class="link for-chapter2">
-                                                <a href="additional-documentation/db-design/field.html" data-type="entity-link" data-context="sub-entity" data-context-id="additional">field</a>
-                                            </li>
-                                            <li class="link for-chapter2">
-                                                <a href="additional-documentation/db-design/livestock.html" data-type="entity-link" data-context="sub-entity" data-context-id="additional">livestock</a>
-                                            </li>
-                                            <li class="link for-chapter2">
-                                                <a href="additional-documentation/db-design/personnel.html" data-type="entity-link" data-context="sub-entity" data-context-id="additional">personnel</a>
-                                            </li>
-                                            <li class="link for-chapter2">
-                                                <a href="additional-documentation/db-design/inventory.html" data-type="entity-link" data-context="sub-entity" data-context-id="additional">inventory</a>
-                                            </li>
-                                            <li class="link for-chapter2">
-                                                <a href="additional-documentation/db-design/building.html" data-type="entity-link" data-context="sub-entity" data-context-id="additional">building</a>
-                                            </li>
-                                            <li class="link for-chapter2">
-                                                <a href="additional-documentation/db-design/equipment.html" data-type="entity-link" data-context="sub-entity" data-context-id="additional">equipment</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                        </ul>
-                    </li>
                     <li class="chapter modules">
                         <a data-type="chapter-link" href="modules.html">
                             <div class="menu-toggler linked" data-toggle="collapse" ${ isNormalMode ?
@@ -109,13 +55,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-56f39fe66fb80481b1a9894f81909fbe"' : 'data-target="#xs-components-links-module-AppModule-56f39fe66fb80481b1a9894f81909fbe"' }>
+                                            'data-target="#components-links-module-AppModule-023ed6e2c768fcc849e13b4f163bc7f3"' : 'data-target="#xs-components-links-module-AppModule-023ed6e2c768fcc849e13b4f163bc7f3"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-56f39fe66fb80481b1a9894f81909fbe"' :
-                                            'id="xs-components-links-module-AppModule-56f39fe66fb80481b1a9894f81909fbe"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-023ed6e2c768fcc849e13b4f163bc7f3"' :
+                                            'id="xs-components-links-module-AppModule-023ed6e2c768fcc849e13b4f163bc7f3"' }>
                                             <li class="link">
                                                 <a href="components/AppComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
@@ -259,13 +205,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/FeatureModulesDashboardModule.html" data-type="entity-link">FeatureModulesDashboardModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-FeatureModulesDashboardModule-af24abf1e973b55a8b7d8e8e95253fbb"' : 'data-target="#xs-components-links-module-FeatureModulesDashboardModule-af24abf1e973b55a8b7d8e8e95253fbb"' }>
+                                            'data-target="#components-links-module-FeatureModulesDashboardModule-b3ed036ce3046303085d788b9f837dbc"' : 'data-target="#xs-components-links-module-FeatureModulesDashboardModule-b3ed036ce3046303085d788b9f837dbc"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FeatureModulesDashboardModule-af24abf1e973b55a8b7d8e8e95253fbb"' :
-                                            'id="xs-components-links-module-FeatureModulesDashboardModule-af24abf1e973b55a8b7d8e8e95253fbb"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FeatureModulesDashboardModule-b3ed036ce3046303085d788b9f837dbc"' :
+                                            'id="xs-components-links-module-FeatureModulesDashboardModule-b3ed036ce3046303085d788b9f837dbc"' }>
                                             <li class="link">
                                                 <a href="components/DashboardPageComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">DashboardPageComponent</a>

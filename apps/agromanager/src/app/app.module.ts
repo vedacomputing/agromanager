@@ -10,8 +10,8 @@ import {AngularFireModule} from '@angular/fire';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {UiKitsMainModule} from '@agromanager/ui-kits/main';
-import {from} from 'rxjs';
 import {FeatureModulesAnimalsModule} from '@agromanager/feature/modules/animals';
+import {FeatureModulesDashboardModule} from '@agromanager/feature/modules/dashboard';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -22,6 +22,7 @@ import {FeatureModulesAnimalsModule} from '@agromanager/feature/modules/animals'
 		AngularFireModule.initializeApp(firebaseDEVConfig),
 		AppRoutingModule,
 		FeatureModulesAnimalsModule,
+		FeatureModulesDashboardModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

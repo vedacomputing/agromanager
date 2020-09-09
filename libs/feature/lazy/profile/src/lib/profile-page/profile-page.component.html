@@ -1,1 +1,4 @@
-<p>profile-page works!</p>
+<div *ngIf="auth.user$ | async as user">
+	<h3>Howdy, {{ user.displayName }}</h3>
+	<p>UID: {{ user.uid }}</p>
+</div>
